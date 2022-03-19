@@ -7,7 +7,7 @@ import { Hello } from './components/Hello.tsx'
 const comments = ['Hey! This is the first comment.', 'Hi, from another comment!']
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
+  const counter = 0;
   return (
     <div>
       <Helmet>
