@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div>
       <Helmet>
-        <title>Nano JSX SSR</title>
+        <title>Nano JSX</title>
         <meta name="description" content="Server Side Rendered Nano JSX Application" />
       </Helmet>
 
