@@ -6,22 +6,27 @@ import { Hello } from './components/Hello.tsx'
 
 const comments = ['Hey! This is the first comment.', 'Hi, from another comment!']
 
-const App = () => (
-  <div>
-    <Helmet>
-      <title>Nano JSX SSR</title>
-      <meta name="description" content="Server Side Rendered Nano JSX Application" />
-    </Helmet>
+const App = () => {
+  const [counter, setCounter] = useState(0);
+  return (
+    <div>
+      <Helmet>
+        <title>Nano JSX SSR</title>
+        <meta name="description" content="Server Side Rendered Nano JSX Application" />
+      </Helmet>
 
-    <Hello />
+      <Hello />
 
-    <h2>Comments</h2>
+      <h2>Comments</h2>
+      
+      <p>{counter}</p>
 
-    <div id="comments">
-      <Comments comments={comments} />
+      <div id="comments">
+        <Comments comments={comments} />
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 const ssr = renderSSR(<App />)
 const { body, head, footer } = Helmet.SSR(ssr)
